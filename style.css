@@ -2,7 +2,7 @@ body{
   background-color: #f0dbdb;
 }
 
-#card, #front, #back{
+#card, #front{
   border-radius: 20px;
   width:500px;
   aspect-ratio: 13/10;
@@ -10,10 +10,17 @@ body{
 
 #card{
   margin:10% auto 0;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  margin:auto;
 }
 
 #inner{
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -33,7 +40,7 @@ body{
   backface-visibility: hidden;
 }
 #front{
-  background-color: #dba39a;  
+  background-color: #bca3af;  
   cursor: pointer;
 }
 .title, .receiver{
@@ -58,26 +65,47 @@ body{
 }
 
 #back{
-  background-color: beige;
+  /* background-color: beige; */
   transform: rotateY(180deg);
 }
+
 #back.open .flap {
   transform: rotateX(-180deg); /* Rotate flap open smoothly */
+  top:-390px;
 }
-
-
 .flap {
   position: absolute;
-  top: -190px;
-  left: 0;
-  width: 100%;
-  height: 50%; /* Adjust flap height as needed */
-  background-color: #ccc;
-  transform-origin: bottom; /* Set rotation origin for smooth opening */
-  transition: transform 0.5s ease-in-out;  /* Add smooth transition */
+  top: 0;
+  border-top:195px solid #000;
+  border-right:250px solid transparent;
+  border-left: 250px solid transparent;
+  border-bottom: 195px solid transparent;
+  z-index: 1;
 }
 
+.flap-b{
+  z-index: 1;
+  border-top:195px solid transparent;
+  border-right:250px solid #fff;
+  border-left: 250px solid #fff;
+  border-bottom: 195px solid #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
+.content{
+  width:550px;
+  padding:2%;
+  text-align:justify;
+  background-color: #e6d4cb;
+  border-radius: 20px;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  margin:auto;
+}
 
 /* * {
   margin: 0;
