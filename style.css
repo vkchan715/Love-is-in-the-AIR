@@ -94,8 +94,8 @@ body{
 }
 
 .content{
-  width:550px;
-  padding:2%;
+  width:clamp(380px,28.646vw, 550px);
+  padding:30px;
   text-align:justify;
   background-color: #e6d4cb;
   border-radius: 20px;
@@ -104,7 +104,8 @@ body{
   bottom:0;
   right: 0;
   left: 0;
-  margin:auto;
+  margin:50px auto;
+  overflow-y: scroll;
 }
 
 /* * {
