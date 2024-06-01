@@ -4,8 +4,8 @@ body{
 
 #card, #front{
   border-radius: 20px;
-  width:  clamp(320px,26.042vw, 500px);
-  aspect-ratio: 13/10;
+  width:  clamp(320px,26.2vw, 500px);
+  height:clamp(245px, 19.9vw, 380px);
 }
 
 #card{
@@ -71,24 +71,24 @@ body{
 
 #back.open .flap {
   transform: rotateX(-180deg); /* Rotate flap open smoothly */
-  top:-390px;
+  top:-100%;
 }
 .flap {
   position: absolute;
   top: 0;
-  border-top:clamp(125px,13.021vw, 250px) solid #000;
-  border-right:clamp(160px,13.021vw, 250px) solid transparent;
-  border-left: clamp(160px,13.021vw, 250px) solid transparent;
-  border-bottom: clamp(120px,13.021vw, 250px)  solid transparent;
+  border-top:clamp(125px,10vw, 190px) solid #000;
+  border-right:clamp(160px,13.1vw, 250.5px)  solid transparent;
+  border-left:clamp(160px,13.1vw, 250.5px)  solid transparent;
+  border-bottom: clamp(120px,10vw, 190px)  solid transparent;
   z-index: 1;
 }
 
 .flap-b{
   z-index: 1;
-  border-top:clamp(125px,13.021vw, 250px)  solid transparent;
-  border-right:clamp(160px,13.021vw, 250px) solid #fff;
-  border-left: clamp(160px,13.021vw, 250px)  solid #fff;
-  border-bottom: clamp(120px,13.021vw, 250px)  solid #fff;
+  border-top:clamp(125px,10vw, 190px)  solid transparent;
+  border-right:clamp(160px,13.1vw, 250.5px) solid #fff;
+  border-left: clamp(160px,13.1vw, 250.5px)  solid #fff;
+  border-bottom: clamp(120px,10vw, 190px)  solid #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
