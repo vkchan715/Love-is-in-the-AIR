@@ -137,14 +137,14 @@ body{
 }
 
 button#btnclose{
-  background-color: #000;
+  background-color: transparent;
   opacity: 0.7;
   border-radius: 100%;
   border:none;
-  color: #fff;
+  color: #b1a9b9;
   width: 30px;
   height: 30px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .content{

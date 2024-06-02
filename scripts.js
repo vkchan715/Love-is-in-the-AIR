@@ -21,10 +21,10 @@ $(document).ready( function() {
     $(".content-con").addClass("hide");
     setTimeout(function(){
           $("#back").removeClass("open");
-    },300);
+    },400);
     setTimeout(function(){
       $("#inner").removeClass("flip");
-    },500);
+    },900);
   });
 });
 
