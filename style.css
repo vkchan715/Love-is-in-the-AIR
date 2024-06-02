@@ -101,7 +101,7 @@ body{
 }
 
 .content-con{
-  width:clamp(380px,28.646vw, 550px);
+  width:clamp(280px,28.646vw, 550px);
   padding:30px;
   text-align:justify;
   background-color: #e6d4cb;
