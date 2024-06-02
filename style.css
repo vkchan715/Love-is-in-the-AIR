@@ -25,9 +25,10 @@ body{
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 1.5s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
 }
 
 #inner.flip{
@@ -38,6 +39,7 @@ body{
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  border-radius: 20px;
 }
 #front{
   background-color: #bca3af;  
@@ -65,7 +67,7 @@ body{
 }
 
 #back{
-  /* background-color: beige; */
+  background-color: #e6d4cb;
   transform: rotateY(180deg);
 }
 
@@ -76,7 +78,7 @@ body{
 .flap {
   position: absolute;
   top: 0;
-  border-top:clamp(125px,10vw, 190px) solid #000;
+  border-top:clamp(125px,10vw, 190px) solid #b1a9b9;
   border-right:clamp(160px,13.1vw, 250.5px)  solid transparent;
   border-left:clamp(160px,13.1vw, 250.5px)  solid transparent;
   border-bottom: clamp(120px,10vw, 190px)  solid transparent;
@@ -86,14 +88,14 @@ body{
 .flap-b{
   z-index: 1;
   border-top:clamp(125px,10vw, 190px)  solid transparent;
-  border-right:clamp(160px,13.1vw, 250.5px) solid #fff;
-  border-left: clamp(160px,13.1vw, 250.5px)  solid #fff;
-  border-bottom: clamp(120px,10vw, 190px)  solid #fff;
+  border-right:clamp(160px,13.1vw, 250.5px) solid #bca3af;
+  border-left: clamp(160px,13.1vw, 250.5px)  solid #bca3af;
+  border-bottom: clamp(120px,10vw, 190px)  solid #bca3af;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.content{
+.content-con{
   width:clamp(380px,28.646vw, 550px);
   padding:30px;
   text-align:justify;
@@ -106,9 +108,44 @@ body{
   left: 0;
   margin:50px auto;
   overflow-y: scroll;
+  animation: fadeIn 1s;
+}
+
+.content-con.hide{
   display: none;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes transform{
+  0%{transform: rotateY(0deg);}
+  100%{transform: rotateY(180deg);}
+}
+
+.content-con .btn-con{
+  width:100%;
+  margin:30px 0 0;
+  text-align: center;
+}
+
+button#btnclose{
+  background-color: #000;
+  opacity: 0.7;
+  border-radius: 100%;
+  border:none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.content{
+  font-family: "ZCOOL XiaoWei", sans-serif;
+  font-size: 18px;
+}
 /* * {
   margin: 0;
   padding: 0;
