@@ -1,3 +1,4 @@
+var currentpage = 0;
 $(document).ready( function() {
   $("#front").click(function(){
     $("#inner").addClass("flip");
@@ -26,5 +27,43 @@ $(document).ready( function() {
       $("#inner").removeClass("flip");
     },900);
   });
+  reloadpagination();
+  function reloadpagination(){
+    if(currentpage == 0){
+      $("#btnLeft").css("visibility","hidden");
+    }else{
+      $("#btnLeft").css("visibility","visible");
+    }
+    if($(".content").length > 1 && ((currentpage+1) < $(".content").length)){
+      $("#btnRight").css("visibility","visible");
+    }else{
+      $("#btnRight").css("visibility","hidden");
+    }
+  }
+
+  $("#btnRight").click(function(){
+    currentpage += 1;
+    $(".content").each(function(){
+      if($(this).hasClass("selected")){
+        $(this).removeClass("selected")
+      }
+    });
+
+    $(".content").eq(currentpage).addClass("selected");
+    reloadpagination();
+  });
+
+  $("#btnLeft").click(function(){
+    currentpage -= 1;
+    $(".content").each(function(){
+      if($(this).hasClass("selected")){
+        $(this).removeClass("selected")
+      }
+    });
+
+    $(".content").eq(currentpage).addClass("selected");
+    reloadpagination();
+  })
+
 });
 
