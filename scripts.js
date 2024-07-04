@@ -64,6 +64,5 @@ $(document).ready( function() {
     $(".content").eq(currentpage).addClass("selected");
     reloadpagination();
   })
-
 });
 
