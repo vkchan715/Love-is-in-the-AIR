@@ -208,3 +208,12 @@ button#btnclose {
   color: #bca3af;
   font-size: 24px;
 }
+
+.qna{
+  margin-bottom:30px;
+}
+
+.qna .question{
+  font-weight: bold;
+  text-decoration: underline;
+}
